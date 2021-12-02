@@ -1,0 +1,62 @@
+.orria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr 2fr;
+    grid-template-areas:
+        "title title"
+        "main header"
+        "main sidebar"
+        "btn image";
+}
+
+.izenburua {
+    grid-area: title;
+}
+
+.eduki-nagusia {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.oina {
+    grid-area: header;
+}
+
+.botoia {
+    grid-area: btn;
+}
+
+.img {
+    grid-area: image;
+}
+
+
+
+@media screen and (min-width: 34em) {
+
+    .orria {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "btn image image"
+            "main main header"
+            "main main sidebar"
+            "title title title";
+    }
+
+}
+
+@media screen and (min-width: 50em) {
+
+    .orria {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "title title title"
+            "main header header"
+            "main sidebar sidebar"
+            "btn image image";
+    }
+
+}
