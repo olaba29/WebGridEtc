@@ -8,37 +8,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andoni Proba</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
-<body>
+<body background="Liburuak.webp">
     
     <div class="orria">
 
+        <div class="irudia">
+            <img src="Liburu-apalaFondo.jpg" alt="Liburua" width="300" height="200">
+        </div><!--.irudia-->
+
+        <div class="azalpena">
+            <h2 id="abanta">ABANTAILAK:</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusamus officia tempore odit ipsam aut odio sapiente veritatis rem consequatur autem voluptate eos, et minima quos id repellendus iste quibusdam.</p>
+        </div><!--.azalpen-->
+
+        <div class="abantailak">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorem neque eius dolores vitae, beatae eligendi voluptates.!</p>
+        </div><!--.abantailak-->
+
+        <form name="loginak" class="erregistroa" action="index.php" method="POST" > <!-- No sé si hay que hacerlo con algún method en concreto?¿-->
+            <table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input class="form-control" id="izena" type="text" name="izena" placeholder="Izena" title="Letrak soilik. ADB: Markel" ></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input class="form-control" id="abizena" type="text" name="abizena" placeholder="Abizena" title="Letrak soilik. ADB: Garcia" ></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input class="form-control" id="emaila" type="email" name="emaila" placeholder="Email-a" title="ADB: jon291@gmail.com"></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input class="form-control" id="jaiotzeData" type="text" name="jaiotzeData" placeholder="Jaiotze Data" pattern="[0-9]{4}[/]{1}[0-9]{2}[/]{1}[0-9]{2}" title="UUUU/HH/EE   ADB: 2021/01/18"></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input class="form-control" id="nan" type="text" name="nan" placeholder="Sartu ezazu zure NAN" pattern="[0-9]{8}[A-Za-z]{1}" maxlenght="9"title="8 zenbaki eta letra 1. ADB: 55255754k" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><select class="form-control" id="countryCode" name="countryCode" style="max-width: 80px">
+                        <option value="">+34</option>
+                        <option value="">+56</option>
+                        <option value="">+850</option>
+                        <option value="">+972</option>
+                    </select>   
+                    <input class="form-control" id="telefonoZenbakia" type="tel" name="phone" placeholder="Telefono Zenbakia" maxlenght="9" pattern="[0-9]{9}" title="9 zenbakiz osatuta." ></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="button" value="Erregistratu" title="Sakatu baino lehen eremu guztiak beterik egon behar dira" onclick="alerta()"></td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </form><!--.erregistroa-->
+
+        <div class="login">
+            <table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Dagoeneko kontua badaukazu?</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input id="sesioahasi" type="button" name="sesioahasi" value="Sesioa hasi" onclick="location.href='login2.html' " /></td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table> 
+        </div><!--.login-->
+
         <header class="izenburua">
-            <h1>TITULO</h1>
-            <h4>Subtitulo</h4>
-            <p>Autor: Andoni Olabarria</p>
-        </header>
+            <h1>LIBURUTEGIA</h1>
+            <h3>ISSKS Web Orrialdea</h3>
+            <p>Egileak: Martin Amezola eta Andoni Olabarria</p>
+        </header><!--.izenburua-->
 
-        <h1 class="eduki-nagusia">
-            * Eduki nagusia da hau *
-        </h1>
-
-        <aside class="sidebar">
-            * Side bar-a da hau *
-        </aside>
-
-        <button class="botoia" onclick="alerta()">KLIK</button>
-
-        <footer class="oina">
-            <p>Amaiera naiz (OINA)</p>
+        <footer class="kontaktua">
+            <a href="https://github.com/olaba29">Nire GitHubeko profila ikusi!</a>
+            <img src="git.jpeg" alt="Git" width="30" height="30">
         </footer>
-
-        <h2 class="img">
-            RELLENO
-        </h2>
-
     </div><!--.orria-->
 
 </body>

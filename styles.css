@@ -1,62 +1,90 @@
-.orria {
+* { /* Html osoan aplikatuko dira */
+    font-family: sans-serif;
+    font-weight: normal;
+    padding: 1px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.orria { /* TELEFONOA */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "title title"
-        "main header"
-        "main sidebar"
-        "btn image";
+        "tit tit"
+        "log reg"
+        "aban reg";
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.orria > * { /* Orria class duen elementuko seme zuzen guztietan */
+    background: linear-gradient(to right, #b66a50, #e8730cee);
+    border-style: solid;
 }
 
 .izenburua {
-    grid-area: title;
+    grid-area: tit;
+    text-align: center;
 }
 
-.eduki-nagusia {
-    grid-area: main;
+.login {
+    grid-area: log;
 }
 
-.sidebar {
-    grid-area: sidebar;
+.erregistroa {
+    grid-area: reg;
 }
 
-.oina {
-    grid-area: header;
+.abantailak {
+    grid-area: aban;
+    text-align: left;
 }
 
-.botoia {
-    grid-area: btn;
+.abantailak #abanta{
+    text-align: center;
 }
 
-.img {
-    grid-area: image;
-}
-
-
-
-@media screen and (min-width: 34em) {
+@media screen and (max-width: 480px) { /* TABLET */
 
     .orria {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "btn image image"
-            "main main header"
-            "main main sidebar"
-            "title title title";
+            "tit tit"
+            "log reg"
+            "img reg"
+            "aban cont";
+    }
+
+    .kontaktua {
+        grid-area: cont;
+    }
+
+    .irudia {
+        grid-area: img;
     }
 
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (max-width: 900px) { /* ORDENAGAILUA */
 
     .orria {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "title title title"
-            "main header header"
-            "main sidebar sidebar"
-            "btn image image";
+            "tit tit tit"
+            "img img2 reg"
+            "aban log reg"
+            "aban cont cont";
+    }
+
+    .azalpena {
+        grid-area: img2;
     }
 
 }
