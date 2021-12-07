@@ -1,3 +1,4 @@
 function alerta(){
-    alert("Idiota");
+    var izena = document.getElementById('izena').value;
+    alert("Kaixo " + izena);
 }
