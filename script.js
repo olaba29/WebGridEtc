@@ -28,6 +28,7 @@ function alerta(){
     var nan = document.getElementById('nan').value;
     if (/[0-9]{8}[A-Za-z]{1}/.test(nan)) {
         k5 = 1;
+        letraEgiaztatu(nan);
     }
 
     var ktot = k1 + k2 + k3 + k4 + k5;
@@ -39,6 +40,17 @@ function alerta(){
 }
 
 function letraEgiaztatu(dni) {
+    var array = [];
+    array = dni.split("");
+    let letra = array[8];
+    alert(array.join(''));
+    alert(letra);
+    array.pop();
+    alert(array.join(''));
+    let nanznb = array.join('').parseInt();
+    alert(nanznb.toString()); //Cuidao aquí
+}
+/*
     var array = JSON.parse("[" + dni + "]");
     var letra = array[9];
     array.splice(9,1);
@@ -52,4 +64,4 @@ function letraEgiaztatu(dni) {
     else{
         return 0;
     }
-}
+*/
