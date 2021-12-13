@@ -27,8 +27,9 @@ function alerta(){
 
     var nan = document.getElementById('nan').value;
     if (/[0-9]{8}[A-Za-z]{1}/.test(nan)) {
-        k5 = 1;
-        letraEgiaztatu(nan);
+        if (letraEgiaztatu(nan)==1) {
+            k5 = 1;
+        }
     }
 
     var ktot = k1 + k2 + k3 + k4 + k5;
@@ -43,12 +44,21 @@ function letraEgiaztatu(dni) {
     var array = [];
     array = dni.split("");
     let letra = array[8];
-    alert(array.join(''));
-    alert(letra);
+    //alert(array.join(''));
+    //alert(letra);
     array.pop();
-    alert(array.join(''));
-    let nanznb = array.join('').parseInt();
-    alert(nanznb.toString()); //Cuidao aquí
+    //alert(array.join(''));
+    var znb = array.join('');
+    var nanzenbaki = parseInt(znb);
+    var pos = nanzenbaki%23;
+    var letrak = ["t","r","w","a","g","m","y","f","p","d","x","b","n","j","z","s","q","v","h","l","c","k","e"];
+    var emaitza = letrak[pos];
+    //alert(emaitza);
+    if (letra.toLowerCase()!=emaitza) {
+        return 0;
+    } else {
+        return 1;
+    }
 }
 /*
     var array = JSON.parse("[" + dni + "]");
