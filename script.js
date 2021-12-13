@@ -32,6 +32,11 @@ function alerta(){
         }
     }
 
+    var tlfcc = document.getElementById('countryCode').value;
+    var tlfznb = document.getElementById('telefonoZenbakia').value;
+    var tlf = tlfcc+tlfznb;
+    alert(tlf);
+
     var ktot = k1 + k2 + k3 + k4 + k5;
     if (ktot!=5) {
         alert("Kaixo " + izena + " " + abizena + ", " +  emaila + " postarekin" + " eta " + jaiotzeData + " datan jaioa" + nan + " zenbakiarekin" +", ez zara Andoni Olabarria");
