@@ -4,6 +4,7 @@ function alerta(){
     var k3 = 0;
     var k4 = 0;
     var k5 = 0;
+    var k6 = 0;
 
     var izena = document.getElementById('izena').value; /*Izena id-aren bidez*/
     if (/^[A-Za-z]+$/.test(izena)) { /* / / artean expresioa */
@@ -32,13 +33,16 @@ function alerta(){
         }
     }
 
-    var tlfcc = document.getElementById('countryCode').value;
+    //var tlfcc = document.getElementById('countryCode').value;
     var tlfznb = document.getElementById('telefonoZenbakia').value;
-    var tlf = tlfcc+tlfznb;
-    alert(tlf);
+    //var tlf = tlfcc+tlfznb;
+    //alert(tlfznb);
+    if (/[0-9]{9}/.test(tlfznb)) {
+        k6 = 1;
+    }
 
-    var ktot = k1 + k2 + k3 + k4 + k5;
-    if (ktot!=5) {
+    var ktot = k1 + k2 + k3 + k4 + k5 + k6;
+    if (ktot!=6) {
         alert("Kaixo " + izena + " " + abizena + ", " +  emaila + " postarekin" + " eta " + jaiotzeData + " datan jaioa" + nan + " zenbakiarekin" +", ez zara Andoni Olabarria");
     } else {
         alert("Ongi etorri jefe");
